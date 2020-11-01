@@ -6,10 +6,10 @@ from movie import Movie
 
 class CustomerTest(unittest.TestCase): 
 	""" Tests of the Customer class"""
-	
+
 	def setUp(self):
 		"""Test fixture contains:
-		
+
 		c = a customer
 		movies = list of some movies
 		"""
@@ -17,12 +17,12 @@ class CustomerTest(unittest.TestCase):
 		self.new_movie = Movie("Mulan", Movie.NEW_RELEASE)
 		self.regular_movie = Movie("CitizenFour", Movie.REGULAR)
 		self.childrens_movie = Movie("Frozen", Movie.CHILDRENS)
-		
+
 	@unittest.skip("No convenient way to test")
-	def test_billing():
+	def test_billing(self):
 		# no convenient way to test billing since its buried in the statement() method.
 		pass
-	
+
 	def test_statement(self):
 		stmt = self.c.statement()
 		# visual testing
